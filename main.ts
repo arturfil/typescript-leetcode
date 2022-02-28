@@ -1,11 +1,15 @@
-import longestCommonPrefix from "./sliding_window/longestCommonPrefix";
+import LongestCommonPrefix from "./SlidingWindow/LongestCommonPrefix";
+import ValidParenthesis from "./Stacks/ValidParenthesis";
 
+class Main {
 
-function main() {
-    let strs = ["flower","flow","flight"];
-    let strs2 = ["ab","a"];
-    console.log(longestCommonPrefix(strs2));
-        
+    main() {
+        let test = "()";
+        let test2 = "{()}[]";
+        const par = new ValidParenthesis();
+        console.log(par.isValid("[)"));
+    }
 }
 
-main();
+const mainClass = new Main();
+mainClass.main();
