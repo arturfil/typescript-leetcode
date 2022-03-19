@@ -5,6 +5,7 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
+    "test": "jest",
     "start": "ts-node-dev main.ts"
   },
   "keywords": [],
