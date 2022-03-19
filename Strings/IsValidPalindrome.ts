@@ -1,9 +1,12 @@
 export class IsValidPalindrome {
     isPalindrome(s: string):boolean {
+        
+        let c_str = s.replace(/[^0-9A-Z]+/gi, '').toLowerCase();
+        console.log(c_str);
         let i = 0;
-        let j = s.length-1;
-        for(; i < s.length/2 && j >= s.length/2; i++, j--) {
-            if (s[i] !== s[j]) return false;
+        let j = c_str.length-1
+        while(i < j) {
+            if (c_str[i++] !== c_str[j--]) return false;
         }
         return true;
     }

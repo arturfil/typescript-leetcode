@@ -7,7 +7,8 @@ class Main {
 
     main() {
         const pal = new IsValidPalindrome();
-        console.log(pal.isPalindrome("racecar"));
+        console.log(pal.isPalindrome("A man, a plan, a canal: Panama"));
+        // console.log(pal.isPalindrome("raaacecar"));
     }
 }
 
