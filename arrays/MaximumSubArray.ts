@@ -10,3 +10,12 @@ export class MaximumSubArray {
         return max;
     }
 }
+
+/*
+    TESTING
+    const max = new MaximumSubArray();
+    const test = [-2,1,-3,4,-1,2,1,-5,4];
+    console.log(max.maxSubArray(test) );
+
+    EXPLANATION
+*/

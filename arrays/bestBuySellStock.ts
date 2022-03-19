@@ -1,4 +1,4 @@
-class BuyStockSellStock {
+export class BuyStockSellStock {
     maxProfit(prices:number[]): number {
         let min_price = prices[0];
         let max_price = 0;
@@ -12,5 +12,3 @@ class BuyStockSellStock {
         return max_price;
     }
 }
-
-export default BuyStockSellStock;
