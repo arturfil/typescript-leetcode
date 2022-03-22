@@ -1,6 +1,5 @@
 export class IsValidPalindrome {
     isPalindrome(s: string):boolean {
-        
         let c_str = s.replace(/[^0-9A-Z]+/gi, '').toLowerCase();
         console.log(c_str);
         let i = 0;

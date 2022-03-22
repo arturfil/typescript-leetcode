@@ -1,4 +1,5 @@
 import { MaximumSubArray } from "./Arrays/MaximumSubArray";
+import { SingleNumber } from "./Arrays/SingleNumber";
 import ListNode from "./LinkedLists/ListNode";
 import MergeTwoLists from "./LinkedLists/MergeTwoSortedLists";
 import { IsValidPalindrome } from "./Strings/IsValidPalindrome";
@@ -6,9 +7,9 @@ import { IsValidPalindrome } from "./Strings/IsValidPalindrome";
 class Main {
 
     main() {
-        const pal = new IsValidPalindrome();
-        console.log(pal.isPalindrome("A man, a plan, a canal: Panama"));
-        // console.log(pal.isPalindrome("raaacecar"));
+        const sngNum = new SingleNumber()
+        console.log(sngNum.findSingle([2,3,1,2,3,4,4])); 
+        
     }
 }
 
