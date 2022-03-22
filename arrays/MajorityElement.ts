@@ -1,7 +1,21 @@
 export class MajorityElement {
-    // test1 [3,2,1,2] => 2
-    // test2 [2,2,1,1,1,2,1,3,4,5] => 1
     majorityElement(nums: number[]): number {
-        return 3;
+        let hashMap:any = {};
+        nums.forEach(num => {
+            if (hashMap[num]) {
+                hashMap[num] += 1
+            } else {
+                hashMap[num] = 1;
+            }
+        });
+        const values:number[] = Object.values(hashMap);
+        const max = Math.max(...values);
+        let res:string = '';
+        Object.keys(hashMap).forEach(key => {
+            if (hashMap[key] == max) {
+                res = key;
+            }
+        })
+        return parseInt(res);
     }
 }

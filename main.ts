@@ -1,15 +1,14 @@
-import { MaximumSubArray } from "./Arrays/MaximumSubArray";
-import { SingleNumber } from "./Arrays/SingleNumber";
-import ListNode from "./LinkedLists/ListNode";
-import MergeTwoLists from "./LinkedLists/MergeTwoSortedLists";
-import { IsValidPalindrome } from "./Strings/IsValidPalindrome";
+import { ExitStatus } from "typescript";
+import { MajorityElement } from "./Arrays/MajorityElement";
+
 
 class Main {
 
     main() {
-        const sngNum = new SingleNumber()
-        console.log(sngNum.findSingle([2,3,1,2,3,4,4])); 
-        
+        const maj = new MajorityElement();
+        console.log(maj.majorityElement([2,2,1,1,1,2,2]));
+        process.exit(0);
+
     }
 }
 
