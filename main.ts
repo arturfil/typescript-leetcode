@@ -1,12 +1,13 @@
 import { MajorityElement } from "./Arrays/MajorityElement";
+import { UniqueEmails } from "./Strings/UniqueEmails";
 
 
 class Main {
 
     main() {
-        const maj = new MajorityElement();
-        console.log(maj.majorityElement([2,2,1,1,1,2,2]));
-        // finish script function
+        const test = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
+        const unq = new UniqueEmails();
+        unq.numUniqueEmails(test);
         process.exit(0);
     }
 }
