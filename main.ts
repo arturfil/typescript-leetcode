@@ -1,14 +1,14 @@
 import { MajorityElement } from "./Arrays/MajorityElement";
+import { RotateImage } from "./Arrays/RotateImage";
 import { UniqueEmails } from "./Strings/UniqueEmails";
 
 
 class Main {
 
     main() {
-        const test = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
-        const unq = new UniqueEmails();
-        unq.numUniqueEmails(test);
-        process.exit(0);
+        const matrix1 = [[1,2,3],[4,5,6],[7,8,9]];
+        const rt = new RotateImage();
+        rt.rotate(matrix1);
     }
 }
 

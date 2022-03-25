@@ -13,3 +13,16 @@ export class UniqueEmails {
         return hashMap.size;
     }
 }
+
+/*
+    TESTING
+    const test = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
+    const unq = new UniqueEmails();
+    unq.numUniqueEmails(test);
+    process.exit(0);
+    
+    EXPLANATION
+    - you want to first split by the @ and then manipulate the local
+    word by getting rid of the dots and everything after the "+" by 
+    also spliting the word by the "+"
+*/
