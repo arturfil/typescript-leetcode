@@ -23,3 +23,17 @@ export class TwoSum {
 
     }
 }
+
+/*
+    TEST
+    const test = [2,7,11,15];
+    const test2 = [3,2,4]
+    const target = 9; // i.e. two numbers must add up to 9
+    const t = new TwoSum();
+    console.log(t.twoSumAlt(test, target));
+
+    EXPLANATION
+    You want to save the index where you currently found that number in the case
+    that you haven't found the other product for the resulting value of the addition "target"
+    Hence when you find it, you return the index where you found that number and the current
+*/
