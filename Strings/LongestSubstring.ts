@@ -1,16 +1,16 @@
 export class LongestSubstring {
     lengthOfLongestSubstring(s: string): number {
-        let total = 0;
-        const hashMap: Map<string, number> = new Map();
-        let begin = 0;
+        const map = new Map();
+        let start = 0;
+        let len = 0;
         for(let end = 0; end < s.length; end++) {
-            if (hashMap.has(s[end]) && hashMap.get(s[end])! >= begin) {
-                begin = hashMap.get(s[end])! + 1;
+            if (map.has(s[end]) && map.get(s[end]) >= start) {
+                start = map.get(s[end]) + 1;
             }
-            total = Math.max(total, end - begin + 1);
-            hashMap.set(s[end], end);
+            len = Math.max(len, end - start + 1)
+            map.set(s[end], end);
         }
-        return total;
+        return len;
     }
 }
 

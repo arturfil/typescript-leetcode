@@ -10,7 +10,7 @@ class MergeTwoLists {
             return list1;
         } else {
             list2.next = this.mergeTwoLists(list1, list2.next);
-            return list2;
+            return list2
         }
     }
 }
