@@ -23,3 +23,17 @@ export class FloodFill {
     }
     
 }
+
+/*
+    TESTING
+    const testImage = [[1,1,1],[1,1,0],[1,0,1]];
+    const f = new FloodFill();
+    f.floodFill(testImage, 1, 1, 2);
+
+    EXPLANATION
+    - You want to do a depth search first where you check that 
+    the current "pixel" has an original color that you want to change.
+    - If that first condition is met, then you change it to the new color,
+    and also the other 4 vertical and horizontal adjacent pixels.
+    - For this, you can use a recursive helper function.
+*/
