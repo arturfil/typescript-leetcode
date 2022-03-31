@@ -1,13 +1,13 @@
 import { FloodFill } from "./Graphs/FloodFill";
+import { LetterCombPhoneNumbers } from "./Recursion/LetterCombPhoneNumbers";
 
 
 class Main {
 
     main() {
-        // image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, newColor = 2
-        const testImage = [[1,1,1],[1,1,0],[1,0,1]];
-        const f = new FloodFill();
-        f.floodFill(testImage, 1, 1, 2);
+        const lett = new LetterCombPhoneNumbers();
+        console.log(lett.letterCombinations("23"))
+        
     }
 }
 
