@@ -1,12 +1,13 @@
 import { ContainerWithMostWater } from "./Arrays/ContainerWithMostWater";
+import { ThreeSum } from "./Arrays/Threesum";
 
 
 class Main {
 
     main() {
-        let con = new ContainerWithMostWater();
-        con.maxArea([1,8,6,2,5,4,8,3,7])
-        
+        let test = [-1,0,1,2,-1,-4];
+        let three = new ThreeSum();
+        three.threeSum(test)  
     }
 }
 
