@@ -1,14 +1,11 @@
-import { FloodFill } from "./Graphs/FloodFill";
-import { ReverseString } from "./Strings/ReverseString";
-import { TwoValidPalindrome } from "./Strings/TwoValidPalindrome";
-// import { LetterCombPhoneNumbers } from "./Recursion/LetterCombPhoneNumbers";
+import { ContainerWithMostWater } from "./Arrays/ContainerWithMostWater";
 
 
 class Main {
 
     main() {
-        let two = new TwoValidPalindrome();
-        console.log(two.validPalindrome("aba"));
+        let con = new ContainerWithMostWater();
+        con.maxArea([1,8,6,2,5,4,8,3,7])
         
     }
 }
