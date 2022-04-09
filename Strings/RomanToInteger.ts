@@ -19,3 +19,16 @@ export class RomanToInteger {
         return tot;
     }   
 }
+
+/*
+    TESTING
+    let rom = new RomanToInteger();
+    console.log(rom.romanToInt("LVIII"));
+
+    EXPLANATION
+    - You want to check the values for each key in the "nums"
+    dictionary.
+    - Because roman numbers usually go from big to small, i.e. 19 => XIX
+    that woul be case that the next number is bigger and hence that current 
+    number should be substacted rather than added. =>  +10, -1, +10
+*/
