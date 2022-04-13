@@ -1,6 +1,6 @@
 import { ContainerWithMostWater } from "./Arrays/ContainerWithMostWater";
 import { TopKFrequentElements } from "./Arrays/TopKFrequentElements";
-import { ValidParenthesis } from "./Arrays/ValidParenthesis";
+import { ValidParenthesis } from "./Strings/ValidParenthesis";
 import { Klargest } from "./Design/KLargest";
 import { RomanToInteger } from "./Strings/RomanToInteger";
 
