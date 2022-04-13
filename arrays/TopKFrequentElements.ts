@@ -23,3 +23,11 @@ export class TopKFrequentElements {
         return flat.slice(flat.length - k);
     }
 }
+
+/*
+    TESTING
+    let prodcuts = [1,1,1,2,2,3];
+    let tk = new TopKFrequentElements();
+    tk.topKFrequent(prodcuts, 2);
+    
+*/
