@@ -1,3 +1,4 @@
+import { SearchInRotatedArray } from "./BinarySearch/SearchInRotatedArray";
 import { SearchRange } from "./BinarySearch/SearchRange";
 
 
@@ -5,8 +6,8 @@ import { SearchRange } from "./BinarySearch/SearchRange";
 class Main {
 
     main() {
-        let s = new SearchRange();
-        console.log(s.searchRange([5,7,7,8,8,10], 8));
+        let s = new SearchInRotatedArray();
+        s.search([4,5,6,7,0,1,2], 4);
 
     }
 }

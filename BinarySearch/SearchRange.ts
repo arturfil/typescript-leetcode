@@ -26,3 +26,8 @@ export class SearchRange {
         return [-1, -1];
     }
 }
+
+/*
+    let s = new SearchRange();
+    console.log(s.searchRange([5,7,7,8,8,10], 8));
+ */
