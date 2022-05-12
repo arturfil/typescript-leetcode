@@ -21,3 +21,10 @@ export class Search2DMatrix {
         return false;
     }
 }
+
+
+/* 
+    TESTING
+    let s = new Search2DMatrix();
+    console.log(s.searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]], 3));
+*/
