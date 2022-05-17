@@ -1,10 +1,10 @@
 export class SingleNumber {
     findSingle(nums: number[]): number {
-        let current = nums[0];
-        for(let i = 1; i < nums.length; i++) {
-            current = current ^ nums[i];
+        let num = 0;
+        for (let i = 0; i < nums.length; i++) {
+            num ^= nums[i];
         }
-        return current;
+        return num;
     }
 }
 

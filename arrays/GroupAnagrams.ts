@@ -16,3 +16,10 @@ export class GroupAnagrams {
         return Array.from(map.values());
     }
 }
+
+/* 
+    TESTING
+    let test = ["eat","tea","tan","ate","nat","bat"]
+    let grp = new GroupAnagrams();
+    console.log(grp.groupAnagrams(test));
+*/
