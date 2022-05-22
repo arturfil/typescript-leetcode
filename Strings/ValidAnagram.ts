@@ -14,14 +14,6 @@ export class ValidAnagram {
         }
         return true;
     }
-
-    isAnagramAlt(s: string, t: string): boolean {
-        let str1 = s.split("").sort().join(""); // n * log(n) > n
-        let str2 = t.split("").sort().join("");
-        console.log(`s1: ${str1}, s2: ${str2}`);
-        
-        return str1 === str2;
-    }
 }
 
 /*
