@@ -11,4 +11,17 @@ export class BuyStockSellStock {
         
         return max_price;
     }
+
+    maxProfitAlt(prices:number[]): number {
+        let tot = 0, max = 0;
+        let min = prices[0];
+        for (let i = 1; i < prices.length; i++) {
+            if (prices[i] < min) 
+                min = prices[i];
+            else (prices[i] > max) 
+                max = prices[i];
+            tot = Math.max(tot, max - min);
+        }
+        return tot;
+    }
 }

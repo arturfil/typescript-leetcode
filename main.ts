@@ -1,13 +1,13 @@
 import { ContainerWithMostWater } from "./Arrays/ContainerWithMostWater";
 import { BackSpaceStringCompare } from "./Strings/BackSpaceStringCompare";
 import { MultiplyStrings } from "./Strings/MultiplyStrings";
+import { ValidAnagram } from "./Strings/ValidAnagram";
 
 class Main {
 
     main() {
-        let m_str = new MultiplyStrings();
-        m_str.multiply("223", "4"); // 8
-        
+        let validAng = new ValidAnagram();
+        console.log(validAng.isAnagram("test", "sett"));
     }
 }
 

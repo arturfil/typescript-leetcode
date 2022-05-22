@@ -19,3 +19,12 @@ export class MultiplyStrings {
         return res.join("");
     }
 }
+
+/* 
+    TESTING
+    let m_str = new MultiplyStrings();
+    m_str.multiply("223", "4"); // 8
+
+    EXPLANATION
+    
+*/
