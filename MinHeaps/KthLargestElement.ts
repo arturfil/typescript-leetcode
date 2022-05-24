@@ -39,3 +39,10 @@ class MockMinHeap {
         return this.heap.length;
     }
 }
+
+/*
+    TESGING
+    // Kth Largest Element -> min heap
+    let k = new KthLargestElements();
+    k.findKthLargest([3,2,1,5,6,4], 2);
+*/
