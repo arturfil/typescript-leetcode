@@ -2,11 +2,13 @@ import ListNode from "./ListNode";
 
 export class AddTwoNumbers {
     addTwoNumbers(l1: ListNode | null, l2: ListNode | null) {
-        let head = new ListNode(null!);
-        let carry: number = 0;
-        let current: ListNode =  head;
-        let currentSum: number = 0;
+        let dummyHead = new ListNode();
+        let carry = 0;
+        let current = dummyHead;
+        let currentSum = 0;
+
         while (l1 || l2) {
+            // if there is a carry from previous round
             currentSum = carry;
             if (l1) {
                 currentSum += l1.val;
@@ -16,14 +18,16 @@ export class AddTwoNumbers {
                 currentSum += l2.val;
                 l2 = l2.next;
             }
-            carry = currentSum >= 10 ? 1 : 0;
-            current.next = new ListNode(currentSum % 10);
+            // in the case that num > 9
+            carry = currentSum >=  10 ? 1 : 0;
+            current.next = new ListNode(currentSum % 10); // node without the second digit;
             current = current.next;
         }
+
         if (carry) {
             current.next = new ListNode(carry);
         }
-        return head.next;
+        return dummyHead.next;
     }
 }
 

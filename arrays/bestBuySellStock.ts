@@ -16,5 +16,6 @@ export class BestBuyStockSellStock {
 
 /*
     TESTING
-
+    let buyStk = new BestBuyStockSellStock();
+    console.log(buyStk.maxProfix([2,4,1]));
 */
