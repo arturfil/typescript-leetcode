@@ -1,32 +1,38 @@
+import { FruitIntoABasket } from "./Arrays/FruitIntoABasket";
+import { TreeNode } from "./BinaryTrees/TreeNode";
 import { MostStonesRemoved } from "./Graphs/MostStonesRemoved";
 import { AddTwoNumbers } from "./LinkedLists/AddTwoNumbers";
+import { CountCompleteTreeNodes } from "./LinkedLists/CountCompleteNodes";
 import ListNode from "./LinkedLists/ListNode";
 
 
 class Main {
 
     main() {
-        // Evaluate Division
-        // Letter Combinations of a phonenumber
-        // Most stones removed
-        // let test = [[0,0], [0,1], [1,0], [1,2], [2,1], [2,2]];
-        // let st = new MostStonesRemoved();
-        // console.log(st.removeStones(test));
-
-        let l1 = new ListNode(2);
-        let l1_2 = new ListNode(4);
-        let l1_3 = new ListNode(3);
-        l1.next = l1_2;
-        l1_2.next = l1_3;
-
-        let l2 = new ListNode(5);
-        let l2_2 = new ListNode(6);
-        let l2_3 = new ListNode(4);
-        l2.next = l2_2;
-        l2_2.next = l2_3;
-
-        let addT = new AddTwoNumbers();
-        addT.addTwoNumbers(l1, l2);
+        
+        // create root node
+        let root = new TreeNode(1);
+        // create left side of tree
+        let l_2 = new TreeNode(2);
+        let l_4 = new TreeNode(4);
+        let l_5 = new TreeNode(5);
+        // create rigth side of tree
+        let r_3 = new TreeNode(3);
+        let r_6 = new TreeNode(6);
+        let r_7 = new TreeNode(7);
+        // connect left side
+        root.left = l_2;
+        l_2.left = l_4;
+        l_2.right = l_5;
+        // connect right side
+        root.right = r_3;
+        r_3.left = r_6
+        r_3.right = r_7;
+        
+        // root.printTree(root);
+        let count = new CountCompleteTreeNodes();
+        console.log(count.countNodes(root));
+        
     }
 }
 
