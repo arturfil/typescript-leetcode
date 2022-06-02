@@ -2,7 +2,6 @@ export class MaximumProductSubArray {
     
     maxProduct(nums:number[]): number {
         if (nums.length === 0) return 0;
-
         let max = nums[0], min = nums[0], product = max;
 
         for (let i = 1; i < nums.length; i++) {
@@ -30,6 +29,18 @@ export class MaximumProductSubArray {
         }
         return product;
     }
-
-
 }
+
+/*
+    TESTING
+    let max = new MaximumProductSubArray();
+    let tests = [
+        [2,3,-2,4], // 6
+        [-2],       // -2
+        [-3,-1,-1]  // 3
+    ]
+    
+    tests.forEach(test => {
+        console.log(max.maxProduct(test));
+    });
+*/

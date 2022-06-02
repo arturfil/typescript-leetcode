@@ -1,26 +1,18 @@
-import { MaximumProductSubArray } from "./Arrays/MaximumProductSubArray";
-import { MaximumSubArray } from "./Arrays/MaximumSubArray";
-import { LetterCombPhoneNumbers } from "./Recursion/LetterCombPhoneNumbers";
-
-
+import { CoinChange } from "./DynamicP/CoinChange";
+import { LongestPalindromicSubstring } from "./DynamicP/LongestPalindromicSubstring";
+import { ShortestWayToFormString } from "./Strings/ShortestWayToFormString";
 
 class Main {
 
     main() {
-		// word search II
-		// maximum product sub array
-        let max = new MaximumProductSubArray();
-        let tests = [
-            [2,3,-2,4], // 6
-            [-2],       // -2
-            [-3,-1,-1]  // 3
+        let tests:any = [
+            [[1,2,5], 11],
+            [[2], 3],
+            [[1], 0]
         ]
-        
-        tests.forEach(test => {
-            console.log(max.maxProduct(test));
-        });
 
-        
+        let coin = new CoinChange();
+        tests.forEach((test:any) => coin.coinChange(test[0], test[1]));
     }
 }
 

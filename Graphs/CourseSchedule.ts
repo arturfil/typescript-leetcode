@@ -1,33 +1,33 @@
 export class CourseSchedule {
     canFinish(numCourses: number, prerequisites: number[][]): boolean {
-        let preMap = new Map<number, Array<number>>();
-        let inDeg = new Array<number>(numCourses).fill(0); // fill array with num of courses, to zero
-        let completed = new Array<number>();
+        let prereqMap = new Map<number, Array<number>>(); // map of num, number[]
+        let inDegree = new Array<number>(numCourses).fill(0); // fill array with num of courses, to zero
+        let completed:number[] = [];
 
         for (let i = 0; i <prerequisites.length; i++) {
-            let entry = preMap.get(prerequisites[i][1]) || [];
+            let entry = prereqMap.get(prerequisites[i][1]) || [];
             entry.push(prerequisites[i][0]);
-            preMap.set(prerequisites[i][1], entry);
-            inDeg[prerequisites[i][0]]++;
+            prereqMap.set(prerequisites[i][1], entry);
+            inDegree[prerequisites[i][0]]++;
         }
 
         for (let i = 0; i < numCourses; i++) {
-            if (inDeg[i] === 0) {
+            if (inDegree[i] === 0) {
                 completed.push(i)
             }
         }
 
         while (completed.length > 0) {
             let item = completed.shift();
-            const neighbors = preMap.get(item!) || [];
+            const neighbors = prereqMap.get(item!) || [];
             for (let neighbor of neighbors) {
-                inDeg[neighbor]--;
-                if (inDeg[neighbor] === 0) {
+                inDegree[neighbor]--;
+                if (inDegree[neighbor] === 0) {
                     completed.push(neighbor);
                 }
             }
         }
-        return inDeg.every(item => item === 0);
+        return inDegree.every(item => item === 0);
     }
 }
 

@@ -1,4 +1,4 @@
-import { BestBuyStockSellStock } from "../Arrays/BestBuySellStock";
+import { BestBuyStockSellStock } from "../DynamicP/BestBuySellStock";
 
 let test = new BestBuyStockSellStock();
 
