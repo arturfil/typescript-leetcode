@@ -1,18 +1,20 @@
-import { CoinChange } from "./DynamicP/CoinChange";
-import { LongestPalindromicSubstring } from "./DynamicP/LongestPalindromicSubstring";
-import { ShortestWayToFormString } from "./Strings/ShortestWayToFormString";
+import { MergeIntervals } from "./Arrays/Intervals";
+import { ThreeSum } from "./Arrays/ThreeSum";
+import { TwoSumII } from "./Arrays/TwoSumII";
+
 
 class Main {
-
     main() {
-        let tests:any = [
-            [[1,2,5], 11],
-            [[2], 3],
-            [[1], 0]
+        let tests = [
+            [[1,3],[2,6],[8,10],[15,18]],
+            [[1,4],[2,3]],
+            [[1,4],[0,0]],
+            [[1,4],[0,2],[3,5]],
+            [[1,4],[4,5]]
         ]
-
-        let coin = new CoinChange();
-        tests.forEach((test:any) => coin.coinChange(test[0], test[1]));
+        let inter = new MergeIntervals();
+        tests.forEach(test => inter.merge(test));
+        
     }
 }
 

@@ -1,32 +1,40 @@
 export class ThreeSum {
     threeSum(nums: number[]): number[][] {
-        let res = [];
-        nums.sort((a,b) => a - b);
-        for(let i = 0; i < nums.length-2; i++) {
-            if (nums[i] > 0) break; // one of the constraints is that there is negative values
-            if (i > 0 && nums[i] === nums[i-1]) continue; // next iteration, avoid duplicates. i.e if i = 3, if you encoutner another 3, skip
+        const answers:number[][] = [];
+        nums.sort((a,b) => a - b); // asc ord
 
-            let left = i + 1; // one more than current index
-            let right = nums.length - 1; // left most index
-
+        for (let i = 0; i < nums.length-2; i++) {
+            let left = i + 1, right = nums.length-1;
+            if (i > 0 && nums[i] == nums[i - 1]) continue; // to next number;
+            
             while (left < right) {
-                let sum = nums[i] + nums[left] + nums[right];
-                if (sum > 0) {
+                if (nums[i] + nums[left] + nums[right] < 0) {
+                    left++;
+                } else if (nums[i] + nums[left] + nums[right] > 0){
                     right--;
-                } else if (sum < 0) {
-                    left++;
                 } else {
-                    res.push([nums[i], nums[left], nums[right]]);
+                    answers.push([nums[i], nums[left], nums[right]])
                     left++;
-                    while (left < right && nums[left] === nums[left-1]) left++; // if the next number is the same add 1 to left
+                    while (nums[left] === nums[left - 1] && left < right) left++ // if left === left - 1, go to next left
                 }
             }
         }
-        return [[]];
+        return answers;
     }
 }
 
+
 /* 
     EXPLANATION
-    - You want to iterate through the array and  
+    - The technique you want to use is the three pointers technique.
+    you have nums[i] then left = i + 1, right = nums.length - 1;
+    - For this you have to sort the nums array asc order.
+    - you check that nums[i] + nums[left] + nums[right] === 0;
+    - is sum too little left += 1;
+    - if sum too big, rigth -= 1;
+    - if sum === 0, answers.push(nums[i], nums[left], nums[right]);
+
+    TESTING
+    let three = new ThreeSum();        
+    console.log(three.threeSum([-1,0,1,2,-1,-4]));
 */

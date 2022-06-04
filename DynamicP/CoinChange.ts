@@ -10,3 +10,15 @@ export class CoinChange {
         return dp[amount] === Infinity ? -1 : dp[amount];
     }
 }
+
+/*
+    TESTING
+    let tests:any = [
+            [[1,2,5], 11],
+            [[2], 3],
+            [[1], 0]
+        ]
+
+    let coin = new CoinChange();
+    tests.forEach((test:any) => coin.coinChange(test[0], test[1]));
+*/
