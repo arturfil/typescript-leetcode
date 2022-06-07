@@ -1,18 +1,13 @@
+import { NextPermutation } from "./Arrays/NextPermutation";
 import { CourseSchedule } from "./Graphs/CourseSchedule";
+import { GenerateParentheses } from "./Recursion/GenerateParenthesis";
+import ValidParenthesis from "./Stacks/ValidParenthesis";
 
 
 class Main {
     main() {
-        
-        let tests:[number, number[][]][] = [
-            [2, [[1,0]]],
-            [4, [[1,0],[2,0],[3,1],[3,2]]],
-            [1, []]
-        ]
-
-        let course = new CourseSchedule();
-        tests.forEach(test => course.canFinish(test[0], test[1]))
-        course.canFinish
+        let n = new NextPermutation();
+        console.log(n.nextPermutation([1,2,3]));
     }
 }
 

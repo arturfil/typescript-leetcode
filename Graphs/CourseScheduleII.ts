@@ -37,3 +37,16 @@ export class CourseScheduleII {
         stack.push(i)
     }
 }
+
+/*
+    TESTING
+    let tests:[number, number[][]][] = [
+        [2, [[1,0]]],
+        [4, [[1,0],[2,0],[3,1],[3,2]]],
+        [1, []]
+    ]
+
+    let course = new CourseSchedule();
+    tests.forEach(test => course.canFinish(test[0], test[1]))
+    course.canFinish
+*/
