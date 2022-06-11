@@ -37,3 +37,8 @@ export class NextPermutation {
     }
 
 }
+
+/*
+    let n = new NextPermutation();
+    console.log(n.nextPermutation([1,2,3]));
+*/
