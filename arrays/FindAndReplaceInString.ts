@@ -14,3 +14,9 @@ export class FindAndReplaceInString {
         return chars.join("");
     }
 }
+
+/*
+    TESTING
+    let fnR = new FindAndReplaceInString();
+    console.log(fnR.findReplaceString("abcd", [0,2], ["a", "cd"], ["eee", "ffff"]));
+*/
