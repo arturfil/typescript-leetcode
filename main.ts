@@ -1,9 +1,10 @@
+import { FindAndReplaceInString } from "./Arrays/FindAndReplaceInString";
+
 
 class Main {
     main() {
-        
-        
-        // fl.flipEquiv()
+        let fnR = new FindAndReplaceInString();
+        console.log(fnR.findReplaceString("abcd", [0,2], ["a", "cd"], ["eee", "ffff"]));
     }
 }
 

@@ -7,10 +7,12 @@ class ListNode {
     }
 
     printList(node: ListNode | null) {
+        let list = '';
         while(node !== null) {
-            console.log(node.val);
+            list += `|${node.val}|->`
             node = node.next;
         }
+        console.log(list);
     }
 }
 
