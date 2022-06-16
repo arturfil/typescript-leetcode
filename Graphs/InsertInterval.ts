@@ -24,4 +24,9 @@ export class InsertInterval {
         - as you traverse you have to merge all those overlaping intervals
     ---
     are intervals sorted? I see so, are all numbers positive integers?, come in pairs ✅
+
+    TEST
+    let intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]];
+    let ins = new InsertInterval();
+    console.log(ins.insert(intervals, [4,8])) // [[1,2],[3,10],[12,16]]
 */ 
