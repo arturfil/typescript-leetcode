@@ -1,11 +1,13 @@
-import { FindAndReplaceInString } from "./Arrays/FindAndReplaceInString";
-import { InsertInterval } from "./Graphs/InsertInterval";
-import { StrobogramaticNumberII } from "./Recursion/StrobogramaticNumberII";
-
+import { JumpGame } from "./Arrays/JumpGame";
 
 class Main {
     main() {
-        
+        let jump = new JumpGame();
+        let tests = [
+            [2,3,1,1,4],
+            [3,2,1,0,4]
+        ]
+        console.log(jump.canJump(tests[0]));
     }
 }
 
