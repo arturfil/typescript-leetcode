@@ -1,24 +1,22 @@
 export class LongestPalindromicSubstring {
     longestPalindrome(s: string): string {
-        let currentStr = "", maxStr = "";
+        let max = "", current = "";
+		for(let i = 0; i < s.length; i++) {
+            let even = this.expandOut(i,i,s);
+            let odd  = this.expandOut(i,i+1,s);
+            current = even.length > odd.length ? even : odd;
+            max = max.length > current.length ? max : current;
+		}
+		return max;
+	}
 
-        for(let i = 0; i < s.length; i++) {
-            let oddString = this.expand(s, i, i); // pointint at one index as the center
-            let evenString = this.expand(s, i, i+1); // ponting at two indexes as the center
-            currentStr = oddString.length > evenString.length ? oddString : evenString;    
-            maxStr = maxStr.length > currentStr.length ? maxStr : currentStr;
-        }
-        return maxStr;
-    }
-
-    expand(s: string, left:number, right: number): string  {
-        while(left >= 0 && right <= s.length && s[left] === s[right]) {
-            left  -= 1; // make left go outwards;
-            right += 1; // make right go outwards;
-        }
-        return s.substring(left + 1, right); // same principal as including right, but using the left pointer
-    }
-
+	expandOut(left:number, right:number, str:string):string {
+        while(left >= 0 && right <= str.length && str[left] === str[right]) {
+            left -= 1;
+            right += 1;
+        };
+        return str.substring(left, right - 1);
+	}
 }
 
 /*
