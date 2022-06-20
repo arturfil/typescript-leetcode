@@ -1,10 +1,13 @@
-import { FindMissingRanges } from "./Arrays/FindMissingRanges";
-import { PlusOne } from "./Arrays/PlusOne";
+import { ExpressiveWords } from "./Arrays/ExpressiveWords";
 
 class Main {
     main() {
-        let find = new FindMissingRanges();
-        console.log(find.findMissingRanges([-1], -1, -1));
+        let tests: [string, string[]][] = [
+            ["heeellooo",["hello", "hi", "helo"]],
+            ["zzzzzyyyyy", ["zzyy","zy","zyy"]]
+        ]
+        let exp = new ExpressiveWords();
+        tests.forEach(test => console.log(exp.expressiveWords(test[0], test[1])));
     }
 }
 

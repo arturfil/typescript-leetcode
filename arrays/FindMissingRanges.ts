@@ -15,3 +15,9 @@ export class FindMissingRanges{
         return res;
     }
 }
+
+/*
+    TESTING
+    let find = new FindMissingRanges();
+    console.log(find.findMissingRanges([-1], -1, -1));
+*/

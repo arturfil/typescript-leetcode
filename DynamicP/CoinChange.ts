@@ -13,7 +13,7 @@ export class CoinChange {
 
 /*
     TESTING
-    let tests:any = [
+    let tests:[number[], number][] = [
             [[1,2,5], 11],
             [[2], 3],
             [[1], 0]
