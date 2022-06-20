@@ -1,14 +1,10 @@
+import { FindMissingRanges } from "./Arrays/FindMissingRanges";
 import { PlusOne } from "./Arrays/PlusOne";
 
 class Main {
     main() {
-        let dig = new PlusOne();
-        let tests = [
-            [1,2,3],
-            [9,9,9],
-            [8,9,9,9]
-        ]
-        tests.forEach(test => console.log(dig.plusOne(test)));
+        let find = new FindMissingRanges();
+        console.log(find.findMissingRanges([-1], -1, -1));
     }
 }
 
