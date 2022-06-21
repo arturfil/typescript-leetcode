@@ -1,13 +1,9 @@
-import { ExpressiveWords } from "./Arrays/ExpressiveWords";
+import { NextClosestTime } from "./Arrays/NextClosestTime";
 
 class Main {
     main() {
-        let tests: [string, string[]][] = [
-            ["heeellooo",["hello", "hi", "helo"]],
-            ["zzzzzyyyyy", ["zzyy","zy","zyy"]]
-        ]
-        let exp = new ExpressiveWords();
-        tests.forEach(test => console.log(exp.expressiveWords(test[0], test[1])));
+        let n = new NextClosestTime();
+        console.log(n.nextClosestTime("19:39"));
     }
 }
 
