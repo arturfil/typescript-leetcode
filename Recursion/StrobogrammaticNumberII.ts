@@ -1,5 +1,5 @@
-export class StrobogramaticNumberII {
-    findStrobogramatic(n: number):string[] {
+export class StrobogrammaticNumberII {
+    findStrobogrammatic(n: number):string[] {
         return this.helper(n, n);
     }
 

@@ -45,3 +45,10 @@ export class NextClosestTime {
         return tArr[0] + tArr[0] + ":" + tArr[0] + tArr[0];
     }
 }
+
+/*
+    TESTING
+    let n = new NextClosestTime();
+    console.log(n.nextClosestTime("19:39"));
+
+*/

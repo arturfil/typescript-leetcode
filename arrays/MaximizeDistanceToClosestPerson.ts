@@ -1,7 +1,7 @@
 export class MaximizeDistanceToClosestPerson {
 
     maxDistToClosest(seats: number[]): number {
-        let maxDist = 0, count = 0, last = -1;
+        let maxDist = 0, last = -1;
         for(let i = 0; i < seats.length; i++) {
             if (seats[i] === 1) {
                 // if seen, means there's already a seat taken else, no in between yet
