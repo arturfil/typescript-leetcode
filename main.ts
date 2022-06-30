@@ -1,24 +1,15 @@
 import { NextClosestTime } from "./Arrays/NextClosestTime";
+import { SumOfTwoIntegers } from "./Bits/SumOfTwoIntegers";
 import { SudokuSolver } from "./Graphs/SudokuSolver";
 import { ValidSudoku } from "./Graphs/ValidSudoku";
+import { Test } from "./Testin/Test";
 
 class Main {
     main() {
-        let sudoku = [
-            ["5","3",".",".","7",".",".",".","."],
-            ["6",".",".","1","9","5",".",".","."],
-            [".","9","8",".",".",".",".","6","."],
-            ["8",".",".",".","6",".",".",".","3"],
-            ["4",".",".","8",".","3",".",".","1"],
-            ["7",".",".",".","2",".",".",".","6"],
-            [".","6",".",".",".",".","2","8","."],
-            [".",".",".","4","1","9",".",".","5"],
-            [".",".",".",".","8",".",".","7","9"]
-        ]
-
-        let solv = new SudokuSolver();
+        let s = new SumOfTwoIntegers();
+        console.log(s.getSum(3, 2));
         
-        console.log(solv.solveSudoku(sudoku));
+
     }
 }
 
