@@ -1,44 +1,42 @@
 export class CourseSchedule {
     canFinish(numCourses: number, prerequisites: number[][]): boolean {
-        let prereqMap = new Map<number, Array<number>>(); // map of num, number[]
-        let inDegree = new Array<number>(numCourses).fill(0); // fill array with num of courses, to zero
-        let completed:number[] = [];
+        const visited = new Set<number>();
+        const current = new Set<number>();
+        const preReqs = new Array<number[]>(numCourses);
+        for (let i = 0; i < preReqs.length; i++) preReqs[i] = []; // you do this to avoid same reference in all array
 
-        for (let i = 0; i <prerequisites.length; i++) {
-            let entry = prereqMap.get(prerequisites[i][1]) || [];
-            entry.push(prerequisites[i][0]);
-            prereqMap.set(prerequisites[i][1], entry);
-            inDegree[prerequisites[i][0]]++;
+        for (let [c,p] of prerequisites) {
+            console.log(Array.isArray(preReqs[p]));
+            preReqs[p].push(c);
         }
-
         for (let i = 0; i < numCourses; i++) {
-            if (inDegree[i] === 0) {
-                completed.push(i)
-            }
+            if (!this.dfs(i, current, visited, preReqs)) return false;
         }
+        return true;
+    }
 
-        while (completed.length > 0) {
-            let item = completed.shift();
-            const neighbors = prereqMap.get(item!) || [];
-            for (let neighbor of neighbors) {
-                inDegree[neighbor]--;
-                if (inDegree[neighbor] === 0) {
-                    completed.push(neighbor);
-                }
-            }
+    dfs(val: number,  current: Set<number>, visited: Set<number>, preReqs:number[][]) {
+        if (visited.has(val)) return true;
+        if (current.has(val)) return false;
+        current.add(val);
+        for (let crs of preReqs[val]) {
+            if (!this.dfs(crs, current, visited, preReqs)) return false;
         }
-        return inDegree.every(item => item === 0);
+        current.delete(val);
+        visited.add(val);
+        return true;
     }
 }
 
 /*
     TESTING
-    let testArr0 = [[1,0]];
-    let testArr = [[1,0],[0,1]];
-    let testArr2 = [[1, 0], [2, 1], [3, 2]];
-    let testArr3 = [[1,4],[2,4],[3,1],[3,2]];
+    let tests: [number,number[][]][] = [
+        [2, [[1,0]]],
+        [2, [[1,0],[0,1]]],
+        [5, [[0,1], [0,2], [1,3], [1, 4], [2,3]]]
+    ]
     let course = new CourseSchedule();
-    console.log(course.canFinish(2, testArr3));
+    tests.forEach(test => course.canFinish(test[0], test[1]))
 
     EXPLANATION
     - you want multiple hashmaps in order to make sure that a prerequisite
